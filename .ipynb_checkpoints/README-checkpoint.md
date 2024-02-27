@@ -89,7 +89,7 @@ To do this click on **Data** on the left hand menu and then **Add Data Source**:
 <img src = images/data_source1.png width="800">
 </p>
 
-From here we can see a list of the data sources we have access to. Click on the **Nissan-Workshop** S3 connector. 
+From here we can see a list of the data sources we have access to. Click on the **Phuse2024-Workshop** S3 connector. 
 
 To simplify things in this workshop the data sources have been added with service accounts, but in many organisations you would have to put in your individiual credentials to connect to the data source.
 
@@ -145,7 +145,7 @@ Double click on **Llama_Qdrant_RAG.ipynb** notebook in the left panel:
 
 Run the first cell to load all the library dependencies by pressing *Shift + Enter*. 
 
-This template uses an out of the box document from Domino - but want to use the Nissan documents from our S3 bucket. We need to add a new cell to the Notebook, click the **+** in the top left:
+This template uses an out of the box document from Domino - but want to use the documents from our S3 bucket. We need to add a new cell to the Notebook, click the **+** in the top left:
 
 <p align="center">
 <img src = images/notebook2.png width="800">
@@ -196,7 +196,7 @@ In order to use these document pages we also need to download the appropriate em
 <img src = images/notebook_embeddings.png width="800">
 </p>
 
-Finally we want to load our document pages processing them with the embeddings and storing them in the Qdrant Vector Database. We want to change the name of the collection. Change **mlops** to **nissan**, then run the cell. **Note:** This will take several minutes to populate the database.
+Finally we want to load our document pages processing them with the embeddings and storing them in the Qdrant Vector Database. We want to change the name of the collection. Change **mlops** to **Phuse2024**, then run the cell. **Note:** This will take several minutes to populate the database.
 
 <p align="center">
 <img src = images/notebook_qdrant_nissan.png width="800">
@@ -227,7 +227,7 @@ Lastly we can configure our pipeline with the model, tokenizer and Qdrant. Run t
 </p>
 
 ### Lab 2.2 - Test Model
-We can now test our model! Run the following cell and ask a question of your documents. For the Nissan use case this would be questions about the Nissan Ariya. For example: *"how do I change the battery in the key fob?"*
+We can now test our model! Run the following cell and ask a question of your documents. For this use case this would be questions about the Nissan Ariya. For example: *"how do I change the battery in the key fob?"*
 
 <p align="center">
 <img src = images/question_test.png width="800">
@@ -235,11 +235,7 @@ We can now test our model! Run the following cell and ask a question of your doc
 
 Run the cell and after a few moments the model will return an answer. Note you can rerun this cell several times with different questions if you wish.
 
-<p align="center">
-<img src = images/question_answer.png width="800">
-</p>
-
-# Section 3: Model API Set Up And Deployment
+# Section 3: Model API Setup And Deployment
 Now that we have set up our model and our Qdrant vector database we want to wrap this as an API so we can embed this document search into our downstream applications.
 
 To do this we have to make a small change to our template application code to point to the new Qdrant collection we created and then deploy the model as an API in Domino.
@@ -251,7 +247,7 @@ First we need to open the **model.py** file on the left hand panel. Review this 
 <img src = images/generate.png width="800">
 </p>
 
-In order to make this work with our Nissan documents we simply need to change the name of the Qdrant collection that the code is looking for on line 69. Here change **mlops** to **nissan**:
+In order to make this work with our documents we simply need to change the name of the Qdrant collection that the code is looking for on line 69. Here change **mlops** to **Phuse2024**:
 
 <p align="center">
 <img src = images/model_api_collection.png width="800">
@@ -313,7 +309,7 @@ Domino will now wrap your function in an API wrapper, package up the code and co
 # Section 4: Application Setup and Deployment
 
 ### Lab 4.1 - Reopen Workspace
-To tailor the app to the Nissan Ariya use case we need to re-open our Workspace. But this time we won't need a GPU as we are doing simple development. 
+To tailor the app for Phuse 2024 we need to re-open our Workspace. But this time we won't need a GPU as we are doing simple development. 
 
 Navigate back to your project by clicking **Projects** and then your project name:
 
@@ -344,22 +340,24 @@ We have three things in this app we want to change:
 To add a header image replace the image on line 41 with the following:
 
 ```
-https://poctemppublic.s3.us-west-2.amazonaws.com/n_car.png
+https://cdn.eventsforce.net/files/ef-xpmm6vy566ze/website/27/60de15a0-d344-45b9-bb8a-f41432d26696/banner.jpg
 ```
 
+Note: alternatively, you could replace this with a banner image from your corporate website.
+
 <p align="center">
-<img src = images/app_header_image.png width="800">
+<img src = images/app_header_image_phuse.png width="800">
 </p>
 
 ### Lab 4.3 - Add Logo Image
 Similarly replace the image on line 90 with the following:
 
 ```
-https://poctemppublic.s3.us-west-2.amazonaws.com/n_logo.png
+https://phuse.global/api/uploads/Logo_f549db8454.svg
 ```
 
 <p align="center">
-<img src = images/app_logo.png width="800">
+<img src = images/app_logo_phuse.png width="800">
 </p>
 
 ### Lab 4.4 - Connect to Model API

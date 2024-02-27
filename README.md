@@ -340,22 +340,24 @@ We have three things in this app we want to change:
 To add a header image replace the image on line 41 with the following:
 
 ```
-https://poctemppublic.s3.us-west-2.amazonaws.com/n_car.png
+https://cdn.eventsforce.net/files/ef-xpmm6vy566ze/website/27/60de15a0-d344-45b9-bb8a-f41432d26696/banner.jpg
 ```
 
+Note: alternatively, you could replace this with a banner image from your corporate website.
+
 <p align="center">
-<img src = images/app_header_image.png width="800">
+<img src = images/app_header_image_phuse.png width="800">
 </p>
 
 ### Lab 4.3 - Add Logo Image
 Similarly replace the image on line 90 with the following:
 
 ```
-https://poctemppublic.s3.us-west-2.amazonaws.com/n_logo.png
+https://phuse.global/api/uploads/Logo_f549db8454.svg
 ```
 
 <p align="center">
-<img src = images/app_logo.png width="800">
+<img src = images/app_logo_phuse.png width="800">
 </p>
 
 ### Lab 4.4 - Connect to Model API
