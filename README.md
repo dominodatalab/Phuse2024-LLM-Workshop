@@ -235,10 +235,6 @@ We can now test our model! Run the following cell and ask a question of your doc
 
 Run the cell and after a few moments the model will return an answer. Note you can rerun this cell several times with different questions if you wish.
 
-<p align="center">
-<img src = images/question_answer.png width="800">
-</p>
-
 # Section 3: Model API Setup And Deployment
 Now that we have set up our model and our Qdrant vector database we want to wrap this as an API so we can embed this document search into our downstream applications.
 
