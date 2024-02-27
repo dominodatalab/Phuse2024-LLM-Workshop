@@ -332,8 +332,8 @@ Change the Hardware Tier to **Small** as we won't much compute to just edit code
 Wait for the Workspace to restart again and then open "API_streamlit_app.py".
 
 We have three things in this app we want to change:
-1. Add a header image for the Nissan Ariya
-2. Add a Nissan logo to the chat interface
+1. Add a header image for the Phuse Conference
+2. Add a logo to the chat interface
 3. Connect our app to the Model API we deployed
 
 ### Lab 4.2 - Add Header Image
@@ -416,7 +416,7 @@ Now we can deploy our app! Domino makes this easy to, we can simply point Domino
 <img src = images/app_sh.png width="800">
 </p>
 
-Next give the app a name incorporating your initials again, e.g. **Nissan Ariya QA ABC**:
+Next give the app a name incorporating your initials again, e.g. **Document QA ABC**:
 
 <p align="center">
 <img src = images/app_publish.png width="800">
@@ -431,10 +431,10 @@ This will take several minutes for the container to start. The *App Status* will
 Now we have our working application!
 
 <p align="center">
-<img src = images/working_app.png width="800">
+<img src = images/working_app_phuse.png width="800">
 </p>
 
-You can now ask questions about the Nissan Ariya. Note the model will take a few seconds to respond:
+You can now ask questions about the documents we loaded. Note the model will take a few seconds to respond:
 
 <p align="center">
 <img src = images/app_answer.png width="800">
