@@ -10,10 +10,11 @@
 * Deploy model to a containerized API endpoint
 * Deploy a web-app frontend for end-user consumption
 
-#### Prerequisites
+# Prerequisites
 
 1. GitHub Personal Account. If you do not have a personal GitHub account, you must create one. You can do that here: (http://github.com). Ensure to use your private email address.
 2. GitHub PAT. Once you have your GitHub account, you can create your PAT here: (https://github.com/settings/tokens). Since this is a temporary thing, give it access to everything if you are not sure.
+3. Domino deployment workshop account. You can get that here by clicking sign-up: (https://ws.domino-eval.com)
 
 # Section 1: Project Set Up
 First we need to start a new project based on a Domino AI Hub template. This involves configuring our Git credentals in Domino and adding our external data source, in this case S3. Then we will start a development environment using GPU infrastructure.
